@@ -1,0 +1,290 @@
+/* RESET + BASE STYLE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+    color: #333;
+    line-height: 1.7;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #007acc, #00bcd4);
+    color: white;
+    padding: 50px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.3rem;
+}
+
+/* SECTION CARDS */
+section {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    margin: 40px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #007acc;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* ABOUT SECTION */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-content img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.about-content img:hover {
+    transform: scale(1.05);
+}
+
+.about-content p {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* SKILLS LIST */
+.skills ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.05rem;
+}
+
+.skills li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* CV LINK */
+.cv a {
+    background: #007acc;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.cv a:hover {
+    background: #005e99;
+    transform: scale(1.05);
+}
+
+/* TEXT ANALYZER */
+.text-analyzer textarea {
+    width: 100%;
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    min-height: 250px;
+}
+
+.text-analyzer button {
+    background-color: #007acc;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.text-analyzer button:hover {
+    background-color: #005e99;
+    transform: scale(1.03);
+}
+
+.text-analyzer pre {
+    background-color: #f9f9f9;
+    padding: 18px;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin-top: 20px;
+    white-space: pre-wrap;
+    border: 1px solid #ddd;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.95rem;
+    color: #666;
+    padding-bottom: 20px;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.15);
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RESPONSIVE STUFF */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .text-analyzer button {
+        width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-content img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --card-bg: white;
+    --accent: #007acc;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #eee;
+    --card-bg: #1e1e1e;
+    --accent: #90caf9;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+header, section, .text-analyzer pre {
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.cv a,
+.text-analyzer button {
+    background-color: var(--accent);
+}
+
+h2 {
+    color: var(--accent);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: #005e99;
+}
+

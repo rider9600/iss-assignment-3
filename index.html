@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Naveen's Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<!-- Lightbox Overlay -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+</div>
+
+<body>
+    <header>
+        <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+
+        <h1>Hey, I'm Naveen 👋</h1>
+        <p>Your friendly neighborhood coder + animal protector 🐾</p>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="profile.jpg" alt="My Profile Picture">
+
+            <p>I’m a tech-savvy student working on wildlife monitoring systems using ESP32 and sensors. I love combining code with cause. Let's build cool stuff and save the world while we're at it 🌍✨.</p>
+        </div>
+    </section>
+    
+   <section class="photos">
+    <h2>📸 Me & My Hometown</h2>
+    <div class="gallery-wrapper">
+        <div class="gallery">
+            <img src="local1.jpg" alt="Local Pic 1">
+            <img src="local2.jpg" alt="Local Pic 2">
+            <img src="local3.jpg" alt="Local Pic 3">
+            <img src="local4.jpg" alt="Local Pic 4">
+        </div>
+    </div>
+</section>
+
+    
+    
+    
+
+    <section class="education">
+        <h2>🎓 Education & Achievements</h2>
+        <p>Currently studying at [Your College]. I’ve worked on a bunch of cool projects like a human-wildlife conflict prevention system, and earned praise for innovation in tech fairs.</p>
+    </section>
+
+    <section class="skills">
+        <h2>💻 Technical Skills</h2>
+        <ul>
+            <li><strong>Expert:</strong> C, Python, ESP32</li>
+            <li><strong>Intermediate:</strong> HTML, CSS, NumPy, LoRa</li>
+            <li><strong>Beginner:</strong> JavaScript, React, C++</li>
+        </ul>
+    </section>
+
+    <section class="cv">
+        <h2>📄 CV</h2>
+        <a href="Naveen_CV.pdf" target="_blank">Click here to download my CV (PDF)</a>
+    </section>
+    <section class="text-analyzer">
+        <h2>📝 Text Analyzer</h2>
+        <textarea id="inputText" rows="15" cols="100" placeholder="Paste your 10,000-word masterpiece here..."></textarea><br>
+        <button onclick="analyzeText()">Analyze Text</button>
+    
+        <div id="output">
+            <h3>📊 Analysis Results</h3>
+            <pre id="analysisResult"></pre>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Made with 💙 by Naveen</p>
+    </footer>
+</body>
+</html>
