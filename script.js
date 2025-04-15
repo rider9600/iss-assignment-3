@@ -62,13 +62,13 @@ function analyzeText() {
     const articles = ['a', 'an'];
 
     const countTokens = (tokenList) => {
-        const countMap = {};
+        let count = 0;
         for (let word of tokens) {
             if (tokenList.includes(word)) {
-                countMap[word] = (countMap[word] || 0) + 1;
+                count++;
             }
         }
-        return countMap;
+        return count;
     };
 
     const pronounCount = countTokens(pronouns);
@@ -82,18 +82,14 @@ Spaces: ${spaces}
 Newlines: ${newlines}
 Special Symbols: ${specialSymbols}
 
-Pronouns:
-${JSON.stringify(pronounCount, null, 2)}
-
-Prepositions:
-${JSON.stringify(prepositionCount, null, 2)}
-
-Indefinite Articles:
-${JSON.stringify(articleCount, null, 2)}
+Pronouns: ${pronounCount}
+Prepositions: ${prepositionCount}
+Indefinite Articles (a, an): ${articleCount}
     `;
 
     document.getElementById("analysisResult").textContent = result;
 }
+
 
 // Lightbox functionality
 document.querySelectorAll('.gallery img').forEach(img => {
